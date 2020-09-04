@@ -334,9 +334,29 @@ function retVar() {
 let anotherNum = retVar();
 console.log(anotherNum)
 
+//call-back функции
 
+function first(){
+	setTimeout(function(){
+		console.log(1);
+	}, 100);
+}
 
+function second(){
+	console.log(2);
+}
 
+first();
+second();
+
+function learnJS(lang, callback){
+	console.log('я учу' + lang);
+	callback();
+}
+
+learnJS('Javascript', function() {
+	console.log('Я прошел 3й урок')
+})
 
 
 
